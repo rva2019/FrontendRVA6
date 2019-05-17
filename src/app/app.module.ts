@@ -13,7 +13,9 @@ import { StavkaPorudzbineComponent } from './components/stavka-porudzbine/stavka
 import { HelpComponent } from './components/core/help/help.component';
 import { AuthorComponent } from './components/core/author/author.component';
 import { HomeComponent } from './components/core/home/home.component'
-import {MatButtonModule, MatIconModule, MatSidenavModule, MatListModule, MatGridListModule, MatExpansionModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatSidenavModule, MatListModule, MatGridListModule, MatExpansionModule, MatTableModule, MatToolbarModule, MatSelectModule, MatOptionModule} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
+import { ArtiklService } from './services/artikl.service';
 
 
 
@@ -39,10 +41,15 @@ import {MatButtonModule, MatIconModule, MatSidenavModule, MatListModule, MatGrid
     MatSidenavModule,
     MatListModule,
     MatGridListModule,
-    MatExpansionModule
+    MatExpansionModule,
+    MatTableModule,
+    MatToolbarModule,
+    MatSelectModule,
+    MatOptionModule,
+    HttpClientModule
 
   ],
-  providers: [],
+  providers: [ArtiklService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

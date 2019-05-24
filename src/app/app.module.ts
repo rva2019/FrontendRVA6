@@ -13,9 +13,11 @@ import { StavkaPorudzbineComponent } from './components/stavka-porudzbine/stavka
 import { HelpComponent } from './components/core/help/help.component';
 import { AuthorComponent } from './components/core/author/author.component';
 import { HomeComponent } from './components/core/home/home.component'
-import {MatButtonModule, MatIconModule, MatSidenavModule, MatListModule, MatGridListModule, MatExpansionModule, MatTableModule, MatToolbarModule, MatSelectModule, MatOptionModule} from '@angular/material';
+import {MatButtonModule, MatIconModule, MatSidenavModule, MatListModule, MatGridListModule, MatExpansionModule, MatTableModule, MatToolbarModule, MatSelectModule, MatOptionModule, MatSnackBarModule, MatDialogModule, MatInputModule} from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 import { ArtiklService } from './services/artikl.service';
+import { ArtiklDialogComponent } from './components/dialogs/artikl-dialog/artikl-dialog.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -30,7 +32,8 @@ import { ArtiklService } from './services/artikl.service';
     StavkaPorudzbineComponent,
     HelpComponent,
     AuthorComponent,
-    HomeComponent
+    HomeComponent,
+    ArtiklDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +49,14 @@ import { ArtiklService } from './services/artikl.service';
     MatToolbarModule,
     MatSelectModule,
     MatOptionModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatInputModule,
+    FormsModule,
     HttpClientModule
 
   ],
+  entryComponents:[ArtiklDialogComponent],
   providers: [ArtiklService],
   bootstrap: [AppComponent]
 })

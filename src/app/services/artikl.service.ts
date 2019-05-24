@@ -18,4 +18,16 @@ export class ArtiklService{
 
         return this.dataChange.asObservable();
     }
+
+    public addArtikl(artikl: Artikl){
+        this.httpClient.post(this.API_URL, artikl).subscribe();
+    }
+
+    public updateArtikl(artikl: Artikl){
+        this.httpClient.put(this.API_URL, artikl).subscribe();
+    }
+
+    public deleteArtikl(id: number){
+        this.httpClient.delete(this.API_URL + id).subscribe();
+    }
 }
